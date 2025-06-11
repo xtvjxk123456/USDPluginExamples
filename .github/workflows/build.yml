@@ -2,20 +2,7 @@ name: Build and test
 
 # Run the jobs for pushes and pull requests targetting main branch.
 on: 
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
-      - 'LICENSE'
-      - 'images/**'
-  pull_request:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
-      - 'LICENSE'
-      - 'images/**'
+  workflow_dispatch:
 
 jobs:
 # A build job matrix based on pre-built USD binaries provided by NVIDIA on Windows.
